@@ -1,0 +1,23 @@
+﻿<Window x:Class="RacionalBezier.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RacionalBezier"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="859.2" Background="#FFA3A3A3">
+    <Grid x:Name="Ellipse">
+        <Canvas x:Name="g" HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="650" Background="White" MouseLeftButtonDown="Canvas_MouseLeftButtonDown" MouseMove="g_MouseMove"/>
+        <RadioButton x:Name="GeneralCurve" Content="General curve" HorizontalAlignment="Left" Margin="665,10,0,0" VerticalAlignment="Top" IsChecked="True" Checked="GeneralCurve_Checked"/>
+        <TextBox x:Name="WeightsTextBox" HorizontalAlignment="Left" Height="43" Margin="665,56,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="178" PreviewKeyDown="Weights_PreviewKeyDown" KeyDown="Weights_KeyDown" KeyUp="Weights_KeyUp"/>
+        <RadioButton Content="Ellipse" HorizontalAlignment="Left" Margin="665,108,0,0" VerticalAlignment="Top" Checked="RadioButton_Checked"/>
+        <RadioButton x:Name="Incircle" Content="Incircle" HorizontalAlignment="Left" Margin="665,128,0,0" VerticalAlignment="Top" Checked="Incircle_Checked"/>
+        <CheckBox x:Name="ParamCheckBox" Content="Visualize parameter" HorizontalAlignment="Left" Margin="665,318,0,0" VerticalAlignment="Top" Checked="ParamCheckBox_Checked" Unchecked="ParamCheckBox_Unchecked"/>
+        <Slider x:Name="Slider" HorizontalAlignment="Left" Margin="666,338,0,0" VerticalAlignment="Top" Width="122" LargeChange="0.1" Maximum="1" SmallChange="0.01" TickFrequency="0.01" IsSnapToTickEnabled="True" AutoToolTipPlacement="BottomRight" AutoToolTipPrecision="2" ValueChanged="Slider_ValueChanged"/>
+        <CheckBox x:Name="FlowCheckBox" Content="Parametrization flow" HorizontalAlignment="Left" Margin="665,385,0,0" VerticalAlignment="Top" Checked="FlowCheckBox_Checked" Unchecked="FlowCheckBox_Unchecked" Height="16"/>
+        <Button x:Name="DelBut" Content="Delete" HorizontalAlignment="Left" Margin="668,294,0,0" VerticalAlignment="Top" Width="175" Click="DelBut_Click"/>
+        <Label Content="weights (integers): " HorizontalAlignment="Left" Margin="672,25,0,0" VerticalAlignment="Top" Height="26" Width="124"/>
+        <Label x:Name="Control" Content="" HorizontalAlignment="Left" Height="133" Margin="665,148,0,0" VerticalAlignment="Top" Width="178"/>
+
+    </Grid>
+</Window>
